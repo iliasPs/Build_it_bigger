@@ -1,0 +1,45 @@
+Apr 18, 2019 10:17:24 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
+INFO: Overwriting system property key 'java.util.logging.config.file', value 'C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\google_appengine\google\appengine\tools\java\config\sdk\logging.properties' with value 'WEB-INF/logging.properties' from 'C:\Users\vega\AndroidStudioProjects\ud867-master\FinalProject\backend\build\exploded-backend\WEB-INF\appengine-web.xml'
+2019-04-18 22:17:24.370:INFO::main: Logging initialized @467ms to org.eclipse.jetty.util.log.StdErrLog
+2019-04-18 22:17:24.408:WARN:oejs.AbstractConnector:main: Ignoring deprecated socket close linger time
+Apr 18, 2019 7:17:24 PM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
+WARNING: Your working directory, (C:\Users\vega\AndroidStudioProjects\ud867-master\FinalProject\backend) is not equal to your 
+web application root (C:\Users\vega\AndroidStudioProjects\ud867-master\FinalProject\backend\build\exploded-backend)
+You will not be able to access files from your working directory on the production server.
+
+2019-04-18 22:17:24.664:INFO:oejs.Server:main: jetty-9.4.14.v20181114; built: 2018-11-14T21:20:31.478Z; git: c4550056e785fb5665914545889f21dc136ad9e6; jvm 1.8.0_152-release-1248-b01
+2019-04-18 22:17:25.154:INFO:oejsh.ContextHandler:main: Started c.g.a.t.d.j.DevAppEngineWebAppContext@52f27fbd{/,file:///C:/Users/vega/AndroidStudioProjects/ud867-master/FinalProject/backend/build/exploded-backend/,AVAILABLE}{C:\Users\vega\AndroidStudioProjects\ud867-master\FinalProject\backend\build\exploded-backend}
+2019-04-18 22:17:25.154:INFO:oejs.session:main: DefaultSessionIdManager workerName=node0
+2019-04-18 22:17:25.154:INFO:oejs.session:main: node0 Scavenging disabled
+2019-04-18 22:17:25.165:INFO:oejs.AbstractConnector:main: Started NetworkTrafficSelectChannelConnector@7bd7d6d6{HTTP/1.1,[http/1.1]}{localhost:8080}
+2019-04-18 22:17:25.166:INFO:oejs.Server:main: Started @1264ms
+Apr 18, 2019 7:17:25 PM com.google.appengine.tools.development.AbstractModule startup
+INFO: Module instance default is running at http://localhost:8080/
+Apr 18, 2019 7:17:25 PM com.google.appengine.tools.development.AbstractModule startup
+INFO: The admin console is running at http://localhost:8080/_ah/admin
+Apr 18, 2019 10:17:25 PM com.google.appengine.tools.development.DevAppServerImpl doStart
+INFO: Dev App Server is now running
+Apr 18, 2019 10:17:35 PM com.google.appengine.tools.development.jetty9.LocalResourceFileServlet doGet
+WARNING: No file found for: /favicon.ico
+Apr 18, 2019 10:17:37 PM com.google.appengine.api.datastore.dev.LocalDatastoreService init
+INFO: Local Datastore initialized: 
+	Type: High Replication
+	Storage: C:\Users\vega\AndroidStudioProjects\ud867-master\FinalProject\backend\build\exploded-backend\WEB-INF\appengine-generated\local_db.bin
+Apr 18, 2019 10:17:37 PM com.google.appengine.api.datastore.dev.LocalDatastoreService load
+INFO: The backing store, C:\Users\vega\AndroidStudioProjects\ud867-master\FinalProject\backend\build\exploded-backend\WEB-INF\appengine-generated\local_db.bin, does not exist. It will be created.
+Apr 18, 2019 10:18:06 PM com.google.appengine.api.taskqueue.dev.LocalTaskQueue init
+INFO: LocalTaskQueue is initialized
+Apr 18, 2019 10:18:06 PM org.quartz.simpl.SimpleThreadPool initialize
+INFO: Job execution threads will use class loader of thread: qtp1006485584-17
+Apr 18, 2019 10:18:06 PM org.quartz.core.QuartzScheduler <init>
+INFO: Quartz Scheduler v.UNKNOWN.UNKNOWN.UNKNOWN created.
+Apr 18, 2019 10:18:06 PM org.quartz.simpl.RAMJobStore initialize
+INFO: RAMJobStore initialized.
+Apr 18, 2019 10:18:06 PM org.quartz.impl.StdSchedulerFactory instantiate
+INFO: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+Apr 18, 2019 10:18:06 PM org.quartz.impl.StdSchedulerFactory instantiate
+INFO: Quartz scheduler version: UNKNOWN.UNKNOWN.UNKNOWN
+Apr 18, 2019 10:18:06 PM org.quartz.core.QuartzScheduler start
+INFO: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+Apr 18, 2019 10:18:06 PM com.google.appengine.api.taskqueue.dev.LocalTaskQueue start_
+INFO: Local task queue initialized with base url http://localhost:8080
