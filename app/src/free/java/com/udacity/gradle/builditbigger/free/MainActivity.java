@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements TaskCompleteListe
 
     private static final String JOKE = "joke";
     private AdView mAdView;
-    private ProgressBar progressBar;
+//    private ProgressBar progressBar;
     private EndpointsAsyncTask.TaskCompleteListener listener;
     private String LOG_TAG = MainActivity.class.getSimpleName();
 
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements TaskCompleteListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        progressBar = findViewById(R.id.progress_bar);
+//        progressBar = findViewById(R.id.progress_bar);
 
         MobileAds.initialize(this, "ca-app-pub-3191327484745759~7293798133");
 
@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity implements TaskCompleteListe
     }
 
     public void jokeTeller(View v){
+//        progressBar.setVisibility(View.VISIBLE);
         new EndpointsAsyncTask(this).execute(this);
-        progressBar.setVisibility(View.VISIBLE);
     }
 
     @Override
@@ -71,11 +71,11 @@ public class MainActivity extends AppCompatActivity implements TaskCompleteListe
 
     @Override
     public void onTaskComplete(String result) {
-        Intent intent = new Intent(MainActivity.this, JokeLibraryActivity.class);
+        Intent intent = new Intent(this, JokeLibraryActivity.class);
         intent.putExtra(JOKE, result);
         Log.v(LOG_TAG, "joke is " + result + " " + intent);
         startActivity(intent);
-        progressBar.setVisibility(View.GONE);
+//        progressBar.setVisibility(View.GONE);
     }
 
 

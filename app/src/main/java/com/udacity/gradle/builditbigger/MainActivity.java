@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements EndpointsAsyncTas
     @Override
     public void onTaskComplete(String result) {
 
-        Intent intent = new Intent(MainActivity.this, JokeLibraryActivity.class);
+        Intent intent = new Intent(this, JokeLibraryActivity.class);
 
         intent.putExtra(JOKE, result);
         Log.v(LOG_TAG, "joke is " + result + " " + intent);
