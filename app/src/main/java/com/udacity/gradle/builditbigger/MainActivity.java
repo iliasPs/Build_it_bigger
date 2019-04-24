@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements EndpointsAsyncTas
 
     public void jokeTeller(View view) {
         new EndpointsAsyncTask(this).execute(this);
-        progressBar.setVisibility(View.VISIBLE);
+//        progressBar.setVisibility(View.VISIBLE);
     }
 
     @Override

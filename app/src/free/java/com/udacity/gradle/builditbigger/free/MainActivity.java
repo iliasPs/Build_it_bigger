@@ -80,10 +80,4 @@ public class MainActivity extends AppCompatActivity implements TaskCompleteListe
 
 
 
-    /**
-
-     ΠΡΕΠΕΙ ΝΑ ΦΤΙΑΞΩ ΤΟ ΤΕΛΙΚΟ ΤΕΣΤ
-
-
-     */
 }

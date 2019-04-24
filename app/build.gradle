@@ -32,9 +32,22 @@ android {
 
 
     }
-    dexOptions {
-        javaMaxHeapSize "4g"
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
     }
+//    configurations {
+//        all {
+//            exclude module: 'commons-logging'
+//
+//        }
+//    }
+//    dexOptions {
+//        javaMaxHeapSize "4g"
+//    }
     buildTypes {
         release {
             minifyEnabled false
@@ -54,6 +67,11 @@ android {
         paid {
             applicationId "com.udacity.gradle.builditbigger.paid"
         }
+    }
+
+
+    dexOptions {
+        javaMaxHeapSize "4g"
     }
 }
 
