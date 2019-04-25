@@ -62,9 +62,13 @@ android {
     flavorDimensions "default"
     productFlavors {
         free {
+            dimension "default"
+
             applicationId "com.udacity.gradle.builditbigger.free"
         }
         paid {
+            dimension "default"
+
             applicationId "com.udacity.gradle.builditbigger.paid"
         }
     }
@@ -84,7 +88,7 @@ dependencies {
     implementation 'com.google.http-client:google-http-client-android:1.23.0'
     freeImplementation 'com.google.android.gms:play-services-ads:17.2.0'
     implementation 'com.google.code.findbugs:jsr305:3.0.2'
-    compile project(':JokeLib')
+    implementation project(':JokeLib')
     implementation project(':jokeandroidlib')
     implementation 'com.android.support.test:rules:1.0.2'
     implementation('com.android.support.test.espresso:espresso-core:2.2.2', {

@@ -7,7 +7,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 
 import com.example.jokeandroidlib.JokeLibraryActivity;
@@ -16,17 +18,21 @@ import com.example.jokeandroidlib.JokeLibraryActivity;
 public class MainActivity extends AppCompatActivity implements EndpointsAsyncTask.TaskCompleteListener {
 
     private static final String JOKE = "joke";
-    private ProgressBar progressBar;
+    private ProgressBar spinner;
+
     private String LOG_TAG = MainActivity.class.getSimpleName();
+    private Button button;
+    private TextView tv;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        tv = findViewById(R.id.instructions_text_view);
+        button = findViewById(R.id.button);
+        spinner = (ProgressBar)findViewById(R.id.progressBar1);
 
-
-        progressBar = findViewById(R.id.progress_bar);
     }
 
     @Override
@@ -52,17 +58,18 @@ public class MainActivity extends AppCompatActivity implements EndpointsAsyncTas
 
     public void jokeTeller(View view) {
         new EndpointsAsyncTask(this).execute(this);
-//        progressBar.setVisibility(View.VISIBLE);
+        tv.setVisibility(View.GONE);
+        button.setVisibility(View.GONE);
+        spinner.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void onTaskComplete(String result) {
-
         Intent intent = new Intent(this, JokeLibraryActivity.class);
-
         intent.putExtra(JOKE, result);
-        Log.v(LOG_TAG, "joke is " + result + " " + intent);
         startActivity(intent);
-        progressBar.setVisibility(View.GONE);
+        spinner.setVisibility(View.GONE);
     }
+
+
 }

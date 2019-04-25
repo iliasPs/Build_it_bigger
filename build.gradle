@@ -19,6 +19,19 @@ allprojects {
     repositories {
         jcenter()
         google()
-        maven { url "https://maven.google.com"}
+        maven { url "https://maven.google.com" }
+    }
+
+
+    task startBackend(dependsOn: ':backend:appengineStart') {
+        doLast {
+            println 'App engine started'
+        }
+        task finalTask() {
+            dependsOn 'startBackend'
+            mustRunAfter 'startBackend'
+            dependsOn ':app:connectedAndroidTest'
+            finalizedBy ':backend:appengineStop'
+        }
     }
 }
