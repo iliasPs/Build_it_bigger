@@ -11,14 +11,6 @@ buildscript {
 }
 
 android {
-    signingConfigs {
-        config {
-            keyAlias 'udacity'
-            keyPassword 'HAHAlol!1'
-            storeFile file('C:/Users/vega/AndroidStudioProjects/ud867-master/FinalProject/newkey.jks')
-            storePassword 'HAHAlol!1'
-        }
-    }
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.udacity.gradle.builditbigger"
@@ -39,24 +31,13 @@ android {
         // but continue the build even when errors are found:
         abortOnError false
     }
-//    configurations {
-//        all {
-//            exclude module: 'commons-logging'
-//
-//        }
-//    }
-//    dexOptions {
-//        javaMaxHeapSize "4g"
-//    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.config
         }
-        debug {
-            signingConfig signingConfigs.config
-        }
+
     }
 
     flavorDimensions "default"
